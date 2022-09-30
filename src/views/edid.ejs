@@ -1,0 +1,51 @@
+<%- include('partials/header');%>
+
+<div class="container">
+  <form action="/edit/<%= PEDIDOS._id %>" method="post">
+  <div class="row border border-dark rounded col-8 offset-2" style="background: #EFEFEF;">
+      <div class="col-2 offset-2">
+        <label for="">Nombre</label><br>
+        <input type="text"  value="<%= PEDIDOS.Nombre %>" name="Nombre">
+
+        <label for="">Direccion</label>
+        <input type="text" name="Direccion" id=""placeholder="cll00 #00-00 "value="<%= PEDIDOS.Direccion%>" name="Direccion"><br>
+
+        <label for="">Pan</label><br>
+        <select  name="pan">
+          <!-- <optgroup value="<%= PEDIDOS.pan%>" label="panes"> -->
+            <option value="Panqueso" >Panqueso </option>
+            <option value="Pan debono" >Pan debono</option>
+            <option value="Buñuelos" >Buñuelos</option>
+            <option VALUE="pan de yuca ">pan de yuca </option>
+            <option value="Pancerotis">Pancerotis</option>
+            <option value="Pan de canela">Pan de canela</option>
+           <!-- </optgroup> -->
+        </select><br>
+
+      </div>
+
+      <div class="col-2 offset-2">  
+        <label for="">Documento</label> <br>
+        <input type="text"value="<%= PEDIDOS.Documento %>" name="Documento" placeholder="321654987"> <br>
+
+        <label for="">Telefono</label> <br>
+        <input type="text" name="Telefono" value="<%= PEDIDOS.Telefono%>" placeholder="987654321">
+
+        <label for="">Cantidad</label><br>
+        <input type="number" value="<%= PEDIDOS.cantidad%>" name="cantidad">
+
+      </div>
+      <div class="col-2 offset-4">
+        <button class="btn btn-info" type="submit" style="margin-top: 10px;">Guardar</button>
+    </div>
+    <input  class="invisible" type="number" value="<%= PEDIDOS.precio%>" name="precio">
+    </div>
+  </form>
+  </div>
+</body>
+</html>
+<style>
+input:focus {
+  background: #DFF6FF;
+}
+</style>
